@@ -211,9 +211,9 @@ if (!window.storage) {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center">
-                <img viewBox="0 0 100 100" className="w-8 h-8">
+                <svg viewBox="0 0 100 100" className="w-8 h-8">
                   <img src={logo} alt="Oakbridge Labs" className="h-10 w-auto" />
-                </img>
+                </svg>
               </div>
               <span className="text-xl font-serif text-stone-800">Oakbridge Labs</span>
             </div>
