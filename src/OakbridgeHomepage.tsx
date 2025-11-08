@@ -32,13 +32,12 @@ if (!window.storage) {
  *  1) make the beta checkbox a boolean (checked={!!betaEmail})
  *  2) keep ADMIN_PASSWORD only for demo (frontend is public)
  * --------------------------*/
-const OakbridgeHomepage: React.FC = () => {
-  const [page, setPage] = useState("home");
+  const OakbridgeHomepage: React.FC = () => {
+  const [page, setPage] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [betaEmail, setBetaEmail] = useState("");
-  const [betaSubmitted, setBetaSubmitted] = useState(false);
-  const [contactEmail, setContactEmail] = useState("");
-  const [contactMessage, setContactMessage] = useState("");
+  const [betaEmail, setBetaEmail] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
   // Admin
@@ -49,18 +48,17 @@ const OakbridgeHomepage: React.FC = () => {
   const ADMIN_PASSWORD = "oakbridge2024"; // DEMO ONLY. Use a backend in production.
 
   const handleBetaSubmit = async () => {
-    if (betaEmail) {
-      const timestamp = new Date().toISOString();
-      const key = `beta:${timestamp}`;
-      try {
-        await window.storage.set(key, JSON.stringify({ email: betaEmail, timestamp }));
-        setBetaSubmitted(true);
-        setBetaEmail("");
-        setTimeout(() => setBetaSubmitted(false), 5000);
-      } catch (error) {
-        console.error("Storage error:", error);
-        alert("Error saving submission. Please try again.");
-      }
+    if (!betaEmail) return;
+
+    const timestamp = new Date().toISOString();
+    const key = `beta:${timestamp}`;
+
+    try {
+      await window.storage.set(key, JSON.stringify({ email: betaEmail, timestamp }));
+      setBetaEmail('');
+    } catch (error) {
+      console.error('Storage error:', error);
+      alert('Error saving submission. Please try again.');
     }
   };
 
@@ -213,9 +211,9 @@ const OakbridgeHomepage: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center">
-                <png viewBox="0 0 100 100" className="w-8 h-8">
+                <img viewBox="0 0 100 100" className="w-8 h-8">
                   <img src={logo} alt="Oakbridge Labs" className="h-10 w-auto" />
-                </png>
+                </img>
               </div>
               <span className="text-xl font-serif text-stone-800">Oakbridge Labs</span>
             </div>
