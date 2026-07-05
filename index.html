@@ -1,24 +1,512 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELGV7SZF56"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oakbridge Labs — Operations Consulting for Contractors | Remove Friction, Make More Money</title>
+  <meta name="description" content="We audit your operations, find where friction is bleeding you, and systematically remove it through automation and process redesign. Based in Middle Tennessee. Serving owner-led businesses nationwide." />
+  <meta name="keywords" content="operations consulting, contractor consulting, fractional COO, construction operations, process automation, business audit, Nashville consulting" />
+  <meta name="author" content="Oakbridge Labs" />
+  <meta name="robots" content="index, follow" />
 
-  gtag('config', 'G-ELGV7SZF56');
-</script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Oakbridge Labs — Operations Consulting for Contractors" />
+  <meta property="og:description" content="Remove operational friction so owner-led businesses make more money and get back more time." />
+  <meta property="og:url" content="https://oakbridgelabs.com" />
+  <meta property="og:image" content="/OakbridgeLabsLogo.png" />
 
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oakbridge Labs</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Oakbridge Labs — Operations Consulting for Contractors" />
+  <meta name="twitter:description" content="Remove operational friction so owner-led businesses make more money and get back more time." />
+  <meta name="twitter:site" content="@oakbridgelabs" />
+
+  <link rel="icon" href="/OakbridgeLabsLogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            oak: {
+              50: '#faf8f5',
+              100: '#f5f0e8',
+              200: '#e8dcc8',
+              300: '#d4c0a0',
+              400: '#b89a70',
+              500: '#9a7848',
+              600: '#7d6038',
+              700: '#5f4a2a',
+              800: '#42341c',
+              900: '#281f10',
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELGV7SZF56"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ELGV7SZF56');
+  </script>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Oakbridge Labs",
+    "description": "Operations consulting and automation for owner-led businesses. We audit operations, find friction, and remove it.",
+    "url": "https://oakbridgelabs.com",
+    "logo": "https://oakbridgelabs.com/OakbridgeLabsLogo.png",
+    "email": "info@oakbridgelabs.com",
+    "areaServed": "US",
+    "founder": {
+      "@type": "Person",
+      "name": "Craig Nowotny",
+      "jobTitle": "Founder & Principal Consultant",
+      "description": "20+ years in construction and operations leadership. Former Director at HCA Healthcare. Scaled and exited Black Bear Construction Services (2021)."
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Operational Audit + Optimization",
+      "priceCurrency": "USD",
+      "price": "2000",
+      "description": "Operational audit, friction mapping, and 90-day optimization roadmap."
+    }
+  }
+  </script>
+</head>
+<body class="font-sans antialiased text-stone-800 bg-white">
+
+  <!-- Nav -->
+  <nav class="fixed w-full bg-white/95 backdrop-blur-sm border-b border-stone-200 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="flex items-center gap-3">
+          <img src="/OakbridgeLabsLogo.png" alt="Oakbridge Labs" class="h-10 w-auto" />
+          <span class="text-lg font-bold text-stone-900 hidden sm:inline">Oakbridge Labs</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#offer" class="text-stone-600 hover:text-oak-700 transition font-medium">What We Do</a>
+          <a href="#process" class="text-stone-600 hover:text-oak-700 transition font-medium">How It Works</a>
+          <a href="#proof" class="text-stone-600 hover:text-oak-700 transition font-medium">Who We Are</a>
+          <a href="#pricing" class="text-stone-600 hover:text-oak-700 transition font-medium">Pricing</a>
+          <a href="#contact" class="bg-oak-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-oak-800 transition">Book a Call</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-stone-700">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-stone-200 bg-white">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#offer" class="block text-stone-700 font-medium py-1">What We Do</a>
+        <a href="#process" class="block text-stone-700 font-medium py-1">How It Works</a>
+        <a href="#proof" class="block text-stone-700 font-medium py-1">Who We Are</a>
+        <a href="#pricing" class="block text-stone-700 font-medium py-1">Pricing</a>
+        <a href="#contact" class="block bg-oak-700 text-white px-5 py-2.5 rounded-lg font-semibold text-center">Book a Call</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-20 px-4 bg-gradient-to-b from-oak-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-block bg-oak-100 text-oak-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+        Operations Consulting for Owner-Led Businesses
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black text-stone-900 leading-tight mb-6">
+        Your business is leaking money<br class="hidden md:block" /> through operational friction.
+      </h1>
+      <p class="text-xl text-stone-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        We audit your operations, find exactly where time and margin are bleeding out, and systematically remove the friction through automation and process redesign.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-oak-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-oak-800 transition shadow-lg shadow-oak-700/20">
+          Book a Free Discovery Call
+        </a>
+        <a href="#offer" class="bg-white text-stone-800 border-2 border-stone-300 px-8 py-4 rounded-lg font-bold text-lg hover:border-oak-700 hover:text-oak-700 transition">
+          See How It Works
+        </a>
+      </div>
+      <p class="text-sm text-stone-500 mt-6">
+        No fluff. No theory. Just friction removal and margin recovery.
+      </p>
+    </div>
+  </section>
+
+  <!-- Problem/Agitation -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-stone-900 mb-8 text-center">Sound familiar?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 p-6 bg-stone-50 rounded-xl">
+          <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-2xl">📊</div>
+          <div>
+            <h3 class="font-bold text-stone-900 mb-1">You can't see your numbers</h3>
+            <p class="text-stone-600">Job costing, margins, and profitability are buried in spreadsheets, whiteboards, or someone's head. You're making decisions blind.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-6 bg-stone-50 rounded-xl">
+          <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-2xl">🕐</div>
+          <div>
+            <h3 class="font-bold text-stone-900 mb-1">You're the bottleneck</h3>
+            <p class="text-stone-600">Every decision, every quote, every fire drill runs through you. The business can't grow beyond your capacity to manage chaos.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-6 bg-stone-50 rounded-xl">
+          <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-2xl">📝</div>
+          <div>
+            <h3 class="font-bold text-stone-900 mb-1">Manual processes everywhere</h3>
+            <p class="text-stone-600">Estimating, scheduling, invoicing, follow-ups — all done by hand, all prone to error, all eating hours that should go to growth.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-6 bg-stone-50 rounded-xl">
+          <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-2xl">📉</div>
+          <div>
+            <h3 class="font-bold text-stone-900 mb-1">Margin is shrinking</h3>
+            <p class="text-stone-600">Revenue might be growing, but profit isn't keeping up. Overhead, rework, and inefficiency are silently eating your margin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer -->
+  <section id="offer" class="py-20 px-4 bg-oak-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">What We Do</h2>
+        <p class="text-xl text-stone-600 max-w-2xl mx-auto">
+          One thing, done well: <span class="font-semibold text-stone-900">remove operational friction</span> so you make more money and get back more time.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="w-14 h-14 bg-oak-700 text-white rounded-xl flex items-center justify-center text-2xl mb-4">🔍</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Audit</h3>
+            <p class="text-stone-600">We map your entire operation — lead intake to final invoice — and identify exactly where time and money are leaking.</p>
+          </div>
+          <div>
+            <div class="w-14 h-14 bg-oak-700 text-white rounded-xl flex items-center justify-center text-2xl mb-4">⚡</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Automate</h3>
+            <p class="text-stone-600">We implement the right tools and integrations to eliminate manual work — estimating, scheduling, invoicing, reporting.</p>
+          </div>
+          <div>
+            <div class="w-14 h-14 bg-oak-700 text-white rounded-xl flex items-center justify-center text-2xl mb-4">📈</div>
+            <h3 class="text-xl font-bold text-stone-900 mb-2">Optimize</h3>
+            <p class="text-stone-600">We build dashboards and reporting that give you visibility for the first time — and keep improving the system over time.</p>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-8 border-t border-stone-200">
+          <p class="text-center text-lg text-stone-700">
+            <span class="font-bold">The result:</span> A business that runs without you in every decision. More margin. More time. More control.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-20 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">How It Works</h2>
+        <p class="text-xl text-stone-600">From first call to friction-free in 30 days.</p>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-oak-700 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+          <div class="flex-1 pb-6 border-b border-stone-200">
+            <h3 class="text-xl font-bold text-stone-900 mb-1">Discovery Call (30 min, free)</h3>
+            <p class="text-stone-600">We talk through your operation, your biggest pain points, and what's eating your time. No pitch. Just a real conversation about where you're bleeding.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-oak-700 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
+          <div class="flex-1 pb-6 border-b border-stone-200">
+            <h3 class="text-xl font-bold text-stone-900 mb-1">Operational Audit</h3>
+            <p class="text-stone-600">You fill a one-page intake. We do a deep audit call (45 min), map your friction points, and deliver a written report within 48 hours — scorecard, friction map, quick wins, automation opportunities, and a 90-day roadmap.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-oak-700 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
+          <div class="flex-1 pb-6 border-b border-stone-200">
+            <h3 class="text-xl font-bold text-stone-900 mb-1">Quick Wins (Week 1-2)</h3>
+            <p class="text-stone-600">We pick 1-2 low-risk fixes and implement them immediately. You see results in the first two weeks — not in six months.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 bg-oak-700 text-white rounded-full flex items-center justify-center font-bold text-xl">4</div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-stone-900 mb-1">Systematic Optimization (90 days+)</h3>
+            <p class="text-stone-600">We work the roadmap — process redesign, automation, dashboards. Ongoing monthly engagement with regular check-ins and measurable progress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof / About -->
+  <section id="proof" class="py-20 px-4 bg-stone-900 text-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Who's Behind This</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="text-6xl font-black text-oak-400 mb-4">20+</div>
+          <p class="text-xl text-stone-300 leading-relaxed">
+            Years building and operating businesses in construction and operations. Not a consultant who's never run anything — a battle-tested operator who's been in the trenches.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="border-l-4 border-oak-500 pl-6">
+            <div class="text-stone-400 text-sm mb-1">2008–2017</div>
+            <div class="font-bold text-lg">HCA Healthcare</div>
+            <p class="text-stone-300">Director-level operational leadership. Managed multi-million dollar budgets. Built data-driven systems in a complex corporate environment.</p>
+          </div>
+          <div class="border-l-4 border-oak-500 pl-6">
+            <div class="text-stone-400 text-sm mb-1">2017–2021</div>
+            <div class="font-bold text-lg">Black Bear Construction Services</div>
+            <p class="text-stone-300">Returned to ownership, scaled the business, and successfully exited in October 2021. Walked the job site and built the dashboard.</p>
+          </div>
+          <div class="border-l-4 border-oak-500 pl-6">
+            <div class="text-stone-400 text-sm mb-1">2023–Present</div>
+            <div class="font-bold text-lg">Oakbridge Labs</div>
+            <p class="text-stone-300">Helping other owner-led businesses do what I did — remove friction, build systems, get back time and margin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 p-6 bg-stone-800 rounded-xl">
+        <p class="text-lg text-stone-200 italic">
+          "I've spent 20+ years building and operating businesses in construction and operations. I started in demolition, transitioned into corporate leadership during the 2008 recession, and then returned to help scale and eventually exit a family construction business in 2021. What came out of that is clarity — I'm at my best when I'm building systems, improving operations, and helping businesses scale efficiently."
+        </p>
+        <p class="text-right text-stone-400 mt-3">— Craig Nowotny, Founder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Pricing</h2>
+        <p class="text-xl text-stone-600">Straightforward. No surprises. Start with an audit.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Entry -->
+        <div class="border-2 border-stone-200 rounded-2xl p-8 hover:border-oak-500 transition flex flex-col">
+          <div class="text-oak-700 font-semibold text-sm mb-2">STARTER</div>
+          <div class="text-4xl font-black text-stone-900 mb-1">$2,000<span class="text-lg font-medium text-stone-500">/mo</span></div>
+          <p class="text-stone-500 text-sm mb-6">Best for smaller firms testing the waters</p>
+          <ul class="space-y-3 text-stone-700 mb-8 flex-1">
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Operational audit + friction map</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Written report with scorecard</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> 90-day roadmap</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> 1-2 quick-win recommendations</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Monthly check-in call</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-stone-100 text-stone-800 px-6 py-3 rounded-lg font-semibold hover:bg-stone-200 transition">Start with an Audit</a>
+        </div>
+
+        <!-- Core (highlighted) -->
+        <div class="border-2 border-oak-700 rounded-2xl p-8 bg-oak-50 relative flex flex-col shadow-xl">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-oak-700 text-white px-4 py-1 rounded-full text-xs font-bold">MOST POPULAR</div>
+          <div class="text-oak-700 font-semibold text-sm mb-2">CORE</div>
+          <div class="text-4xl font-black text-stone-900 mb-1">$4,000–5,000<span class="text-lg font-medium text-stone-500">/mo</span></div>
+          <p class="text-stone-500 text-sm mb-6">Best for firms with real pain and budget</p>
+          <ul class="space-y-3 text-stone-700 mb-8 flex-1">
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Everything in Starter</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Implementation support</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Ongoing optimization</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Automation build-out</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Bi-weekly working sessions</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Dashboard & reporting setup</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-oak-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-oak-800 transition">Book a Discovery Call</a>
+        </div>
+
+        <!-- Fractional COO -->
+        <div class="border-2 border-stone-200 rounded-2xl p-8 hover:border-oak-500 transition flex flex-col">
+          <div class="text-oak-700 font-semibold text-sm mb-2">FRACTIONAL COO</div>
+          <div class="text-4xl font-black text-stone-900 mb-1">$7,000–10,000<span class="text-lg font-medium text-stone-500">+/mo</span></div>
+          <p class="text-stone-500 text-sm mb-6">Best for larger or fast-growing firms</p>
+          <ul class="space-y-3 text-stone-700 mb-8 flex-1">
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Everything in Core</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Deep restructuring</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Fractional COO services</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Weekly leadership meetings</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Team training & process docs</li>
+            <li class="flex items-start gap-2"><span class="text-oak-700 font-bold">✓</span> Equity arrangements possible</li>
+          </ul>
+          <a href="#contact" class="block text-center bg-stone-100 text-stone-800 px-6 py-3 rounded-lg font-semibold hover:bg-stone-200 transition">Let's Talk</a>
+        </div>
+      </div>
+
+      <p class="text-center text-stone-500 text-sm mt-8">
+        Every engagement starts with a free discovery call. No pressure, no pitch — just a real conversation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="py-20 px-4 bg-oak-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Book Your Free Discovery Call</h2>
+        <p class="text-xl text-stone-600">
+          30 minutes. No pitch. We'll talk through your operation and identify your biggest friction points.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+        <form id="contactForm" class="space-y-5">
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-stone-700 mb-1">Name *</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-semibold text-stone-700 mb-1">Company *</label>
+              <input type="text" id="company" name="company" required class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition" placeholder="Company name" />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label for="email" class="block text-sm font-semibold text-stone-700 mb-1">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition" placeholder="you@company.com" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-stone-700 mb-1">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition" placeholder="(optional)" />
+            </div>
+          </div>
+          <div>
+            <label for="revenue" class="block text-sm font-semibold text-stone-700 mb-1">Approximate annual revenue</label>
+            <select id="revenue" name="revenue" class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition bg-white">
+              <option value="">Select range (optional)</option>
+              <option value="under-1m">Under $1M</option>
+              <option value="1m-3m">$1M – $3M</option>
+              <option value="3m-10m">$3M – $10M</option>
+              <option value="10m-plus">$10M+</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-stone-700 mb-1">What's eating your time? *</label>
+            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg focus:border-oak-700 focus:outline-none transition" placeholder="Tell us about your biggest operational headache — the one thing that still takes more manual effort than it should."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-oak-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-oak-800 transition shadow-lg shadow-oak-700/20">
+            Request My Discovery Call
+          </button>
+          <p class="text-center text-stone-500 text-sm">
+            We'll respond within 24 hours. Or email directly: <a href="mailto:info@oakbridgelabs.com" class="text-oak-700 font-semibold hover:underline">info@oakbridgelabs.com</a>
+          </p>
+        </form>
+
+        <div id="formSuccess" class="hidden text-center py-8">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-stone-900 mb-2">Thanks! We'll be in touch within 24 hours.</h3>
+          <p class="text-stone-600">Check your email — we'll send scheduling details shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-white py-10 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <div class="flex items-center gap-3 justify-center md:justify-start mb-2">
+            <img src="/OakbridgeLabsLogo.png" alt="Oakbridge Labs" class="h-8 w-auto" />
+            <span class="text-lg font-bold">Oakbridge Labs</span>
+          </div>
+          <p class="text-stone-400 text-sm">Removing friction. More money. More time.</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <a href="https://linkedin.com/company/oakbridge-labs" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-oak-400 transition" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://twitter.com/oakbridgelabs" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-oak-400 transition" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="mailto:info@oakbridgelabs.com" class="text-stone-400 hover:text-oak-400 transition" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-stone-800 mt-6 pt-6 text-center text-stone-500 text-xs">
+        <p>&copy; 2026 Oakbridge Labs. Built in Middle Tennessee.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.add('hidden');
+      });
+    });
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const payload = Object.fromEntries(data.entries());
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          document.getElementById('formSuccess').classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please email info@oakbridgelabs.com directly.');
+        }
+      } catch (error) {
+        // Fallback: mailto
+        const subject = encodeURIComponent('Discovery Call Request — ' + payload.company);
+        const body = encodeURIComponent(
+          `Name: ${payload.name}\nCompany: ${payload.company}\nEmail: ${payload.email}\nPhone: ${payload.phone || 'N/A'}\nRevenue: ${payload.revenue || 'N/A'}\n\nMessage:\n${payload.message}`
+        );
+        window.location.href = `mailto:info@oakbridgelabs.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
 </html>
