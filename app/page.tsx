@@ -21,12 +21,6 @@ const processSteps = [
   { num: '04', title: 'Systematic Optimization', timing: '90 days+', body: 'Ongoing monthly engagement — we work the plan with you.' }
 ];
 
-const timeline = [
-  { range: '2008–2017', org: 'HCA Healthcare', role: 'Director-level operational leadership' },
-  { range: '2017–2021', org: 'Black Bear Construction Services', role: 'Scaled and exited the family business (sold Oct 2021)' },
-  { range: '2023–Present', org: 'Oakbridge Labs', role: "Helping owner-led operators fix what's broken" }
-];
-
 const tiers = [
   {
     name: 'Starter',
@@ -127,27 +121,14 @@ export default function Home() {
         <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[18ch] mb-10">
           20+ YEARS IN THE FIELD, NOT IN A DECK.
         </h2>
-        <div className="flex gap-8 sm:gap-16 flex-wrap">
-          <div className="flex-1 min-w-[320px]">
-            <blockquote className="border-l-[3px] border-rust pl-5 sm:pl-6 text-lg sm:text-xl leading-relaxed text-ink mb-5 not-italic">
-              &quot;I&apos;ve spent 20+ years building and operating businesses in construction and operations. I started in
-              demolition, transitioned into corporate leadership during the 2008 recession, and then returned to help scale
-              and eventually exit a family construction business in 2021. What came out of that is clarity — I&apos;m at my
-              best when I&apos;m building systems, improving operations, and helping businesses scale efficiently.&quot;
-            </blockquote>
-            <div className="font-mono text-sm text-muted">— Craig Nowotny, Founder</div>
-          </div>
-          <div className="flex-1 min-w-[280px] flex flex-col">
-            {timeline.map((t) => (
-              <div key={t.range} className="flex gap-5 py-4.5 border-t border-line">
-                <div className="font-mono text-sm text-amber min-w-[9ch] shrink-0">{t.range}</div>
-                <div>
-                  <div className="font-semibold text-base mb-1">{t.org}</div>
-                  <div className="text-[14.5px] text-muted leading-relaxed">{t.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-[680px]">
+          <blockquote className="border-l-[3px] border-rust pl-5 sm:pl-6 text-lg sm:text-xl leading-relaxed text-ink mb-5 not-italic">
+            &quot;I&apos;ve spent 20+ years building and operating businesses in construction and operations. I started in
+            demolition, transitioned into corporate leadership during the 2008 recession, and then returned to help scale
+            and eventually exit a family construction business in 2021. What came out of that is clarity — I&apos;m at my
+            best when I&apos;m building systems, improving operations, and helping businesses scale efficiently.&quot;
+          </blockquote>
+          <div className="font-mono text-sm text-muted">— Craig Nowotny, Founder</div>
         </div>
       </section>
 
