@@ -124,7 +124,7 @@ export default function Home() {
         <div className="max-w-[680px]">
           <blockquote className="border-l-[3px] border-rust pl-5 sm:pl-6 text-lg sm:text-xl leading-relaxed text-ink mb-5 not-italic">
             &quot;I&apos;ve spent 20+ years building and operating businesses in construction and operations. I started in
-            demolition, transitioned into corporate leadership during the 2008 recession, and then returned to help scale
+            data analytics, transitioned into corporate leadership during the 2008 recession, and then returned to help scale
             and eventually exit a family construction business in 2021. What came out of that is clarity — I&apos;m at my
             best when I&apos;m building systems, improving operations, and helping businesses scale efficiently.&quot;
           </blockquote>
