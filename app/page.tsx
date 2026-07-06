@@ -21,6 +21,21 @@ const processSteps = [
   { num: '04', title: 'Systematic Optimization', timing: '90 days+', body: 'Ongoing monthly engagement — we work the plan with you.' }
 ];
 
+const products = [
+  {
+    name: 'Lineal',
+    tagline: 'SaaS for subcontractors — estimating, scheduling, and job costing in one place.',
+    href: 'https://lineal.oakbridgelabs.com',
+    external: true
+  },
+  {
+    name: 'The Bridge',
+    tagline: 'Personal operations dashboard. Real-time visibility into trading systems, signals, and project pipelines — all in one pane.',
+    href: null,
+    external: false
+  }
+];
+
 const tiers = [
   {
     name: 'Starter',
@@ -129,6 +144,32 @@ export default function Home() {
             best when I&apos;m building systems, improving operations, and helping businesses scale efficiently.&quot;
           </blockquote>
           <div className="font-mono text-sm text-muted">— Craig Nowotny, Founder</div>
+        </div>
+      </section>
+
+      {/* BUILT */}
+      <section id="built" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
+        <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">Proof of Work</div>
+        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[20ch] mb-12">BUILT, NOT THEORIZED.</h2>
+        <div className="flex flex-wrap gap-5">
+          {products.map((p) => (
+            <div key={p.name} className="flex-1 min-w-[300px] p-7 sm:p-9 bg-panel border border-ink/20 rounded-sm flex flex-col">
+              <h3 className="font-display font-normal text-[26px] mb-3">{p.name}</h3>
+              <p className="text-[15.5px] leading-relaxed text-muted mb-6 flex-1">{p.tagline}</p>
+              {p.href ? (
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-[13px] text-amber hover:text-rustLight transition-colors inline-flex items-center gap-2"
+                >
+                  {p.href.replace(/^https?:\/\//, '')} →
+                </a>
+              ) : (
+                <span className="font-mono text-[13px] text-mutedDark">Internal product</span>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
