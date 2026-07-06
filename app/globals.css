@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #161310;
+  color: #f2ece1;
+}
+
+::selection {
+  background: #c4501f;
+  color: #fbf6ef;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8a8175;
+  opacity: 1;
+}
