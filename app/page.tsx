@@ -2,59 +2,33 @@ import Nav from '@/components/Nav';
 import ContactForm from '@/components/ContactForm';
 
 const painPoints = [
-  { num: '01', title: "YOU CAN'T SEE YOUR NUMBERS", body: "Job costing lives in somebody's head. You find out you lost money on a project after it's already closed." },
-  { num: '02', title: "YOU'RE THE BOTTLENECK", body: "Every decision, every approval, every fire — it comes through you. The business doesn't run without you in the room." },
-  { num: '03', title: 'MANUAL PROCESSES EVERYWHERE', body: 'Spreadsheets, sticky notes, and tribal knowledge are holding your operation together.' },
-  { num: '04', title: 'MARGIN IS SHRINKING', body: "Revenue's up. Profit isn't. Nobody can tell you exactly why." }
+  { num: '01', title: "YOU CAN'T SEE YOUR NUMBERS", body: "Job costing, cash flow, and true margin live in somebody's head — or nowhere. You find out you lost money after the project is already closed." },
+  { num: '02', title: "YOU'RE THE BOTTLENECK", body: "Every decision, every approval, every fire comes through you. The operation can't scale because it depends on you being in the room." },
+  { num: '03', title: 'PROCESS IS HELD TOGETHER BY HABIT', body: 'Spreadsheets, sticky notes, and tribal knowledge keep the wheels on — until someone leaves or something breaks.' },
+  { num: '04', title: 'MARGIN IS SHRINKING', body: "Revenue is up but profit isn't. Nobody can point to exactly where the money is going — or how to stop the leak." },
+  { num: '05', title: "YOU'RE BUSY BUT NOT MOVING", body: "The business is running hard, but it isn't moving toward the future you actually want. The vision is stuck in your head." }
 ];
 
-const methodSteps = [
-  { num: '01 / AUDIT', title: 'Audit', body: 'We map how work actually moves through your business — not how the org chart says it should.' },
-  { num: '02 / AUTOMATE', title: 'Automate', body: 'We remove the manual steps costing you hours and money, and put systems in their place.' },
-  { num: '03 / OPTIMIZE', title: 'Optimize', body: 'We keep tightening the operation until the numbers move, and stay moved.' }
+const artifactSteps = [
+  { num: '01', title: 'Operational Analysis', body: 'Map internal and external processes. Find the friction, waste, and bottlenecks that slow delivery and inflate cost.' },
+  { num: '02', title: 'Financial Analysis', body: 'Trace revenue, cost structure, profit erosion, and true breakeven. Find the dollars hiding in plain sight.' },
+  { num: '03', title: 'Sales Analysis', body: 'See customer concentration, channel performance, and untapped growth. Know exactly where your next revenue should come from.' },
+  { num: '04', title: 'Goal / Vision + Delta', body: 'Capture where the founder wants the company to go, then build the concrete path from today to that future.' }
 ];
 
 const processSteps = [
-  { num: '01', title: 'Discovery Call', timing: '30 min · Free', body: 'A straight conversation about where it hurts.' },
-  { num: '02', title: 'Operational Audit', timing: 'One-page intake · 45-min call · Report in 48 hrs', body: 'You get a written scorecard and a 90-day roadmap.' },
-  { num: '03', title: 'Quick Wins', timing: 'Week 1–2', body: '1–2 low-risk fixes, implemented immediately.' },
-  { num: '04', title: 'Systematic Optimization', timing: '90 days+', body: 'Ongoing monthly engagement — we work the plan with you.' }
+  { num: '01', title: 'Discovery Call', timing: '30 min · Free', body: 'A straight conversation about where it hurts. We confirm there is enough scale and margin for OI to return 10X.' },
+  { num: '02', title: 'Data + Vision Collection', timing: 'Week 1', body: 'We gather financials, sales records, operational workflow, and conduct the founder vision interview.' },
+  { num: '03', title: 'Live Walkthrough', timing: 'Week 2', body: 'We present the 4-artifact diagnostic live on a call — the operational, financial, sales, and delta findings.' },
+  { num: '04', title: 'Engagement + PDF Delivery', timing: 'Upon first payment', body: 'Once you sign and pay the first month, the full PDF package and weekly sprint schedule are delivered.' },
+  { num: '05', title: 'Weekly Execution', timing: 'Ongoing', body: 'Custom weekly deliverables based on engagement length. We work the Delta plan until the numbers move.' }
 ];
 
-const products = [
-  {
-    name: 'Lineal',
-    tagline: 'SaaS for subcontractors — estimating, scheduling, and job costing in one place.',
-    href: 'https://lineal.oakbridgelabs.com',
-    external: true
-  },
-  {
-    name: 'The Bridge',
-    tagline: 'Personal operations dashboard. Real-time visibility into trading systems, signals, and project pipelines — all in one pane.',
-    href: null,
-    external: false
-  }
-];
-
-const tiers = [
-  {
-    name: 'Starter',
-    price: '$2,000/mo',
-    featured: false,
-    features: ['Operational audit + friction map', 'Written report with scorecard', '90-day roadmap', '1–2 quick-win recommendations', 'Monthly check-in call']
-  },
-  {
-    name: 'Core',
-    price: '$4,000–5,000/mo',
-    featured: true,
-    features: ['Everything in Starter', 'Implementation support', 'Ongoing optimization', 'Automation build-out', 'Bi-weekly working sessions', 'Dashboard & reporting setup']
-  },
-  {
-    name: 'Fractional COO',
-    price: '$7,000–10,000+/mo',
-    featured: false,
-    features: ['Everything in Core', 'Deep restructuring', 'Fractional COO services', 'Weekly leadership meetings', 'Team training & process docs', 'Equity arrangements possible']
-  }
+const valueProofs = [
+  { stat: '$30–90k', label: 'Annual value target per client' },
+  { stat: '10X', label: 'Minimum return on engagement cost' },
+  { stat: '4', label: 'Artifacts that form one complete picture' },
+  { stat: '$3k', label: 'Monthly retainer, paid upfront' }
 ];
 
 export default function Home() {
@@ -65,13 +39,13 @@ export default function Home() {
       {/* HERO */}
       <section id="top" className="max-w-[1180px] mx-auto px-5 sm:px-8 pt-[120px] sm:pt-[180px] pb-16 sm:pb-24 border-b border-line">
         <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-5">
-          Operations Consulting — Construction &amp; Trades
+          Operational Intelligence — Contractors & Owner-Led Trades
         </div>
         <h1 className="font-display font-normal text-[40px] sm:text-[64px] lg:text-[88px] leading-[0.98] max-w-[16ch] mb-7">
-          YOUR OPERATION IS COSTING YOU MORE THAN YOU THINK.
+          SEE YOUR BUSINESS. THEN FIX IT.
         </h1>
         <p className="text-[17px] sm:text-xl leading-relaxed text-muted max-w-[52ch] mb-10">
-          We audit how your business actually runs, then remove the friction that&apos;s bleeding your time and your margin.
+          A 4-part diagnostic that exposes where your operation is leaking time and money — and builds the concrete path to the business you actually want.
         </p>
         <a href="#contact" className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors">
           Book a Discovery Call →
@@ -98,9 +72,12 @@ export default function Home() {
       {/* METHOD */}
       <section id="method" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
         <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">The Method</div>
-        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[18ch] mb-12">AUDIT. AUTOMATE. OPTIMIZE.</h2>
+        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[20ch] mb-12">OPERATIONAL INTELLIGENCE.</h2>
+        <p className="text-[17px] sm:text-xl leading-relaxed text-muted max-w-[56ch] mb-12">
+          Four integrated analyses. One Delta plan. Every finding ties back to money, time, or progress toward your vision.
+        </p>
         <div className="flex flex-wrap gap-px bg-line">
-          {methodSteps.map((s) => (
+          {artifactSteps.map((s) => (
             <div key={s.num} className="flex-1 min-w-[260px] bg-bg p-7 sm:p-9">
               <div className="font-mono text-[13px] text-amber mb-4.5">{s.num}</div>
               <h3 className="font-display font-normal text-2xl sm:text-3xl mb-3.5">{s.title}</h3>
@@ -113,7 +90,7 @@ export default function Home() {
       {/* PROCESS */}
       <section id="process" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
         <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">How It Works</div>
-        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[18ch] mb-12">FOUR STEPS. NO FLUFF.</h2>
+        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[18ch] mb-12">FROM DIAGNOSIS TO EXECUTION.</h2>
         <div className="flex flex-col">
           {processSteps.map((s) => (
             <div key={s.num} className="flex gap-6 sm:gap-9 py-6 sm:py-8 border-t border-line flex-wrap">
@@ -127,6 +104,31 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* VALUE */}
+      <section id="value" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
+        <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">The Value</div>
+        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[20ch] mb-12">PAY FOR OUTCOMES. NOT ACCESS.</h2>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+          {valueProofs.map((v) => (
+            <div key={v.label} className="bg-panel border border-ink/20 p-7 sm:p-9 rounded-sm">
+              <div className="font-display text-[36px] sm:text-[48px] text-rust leading-none mb-3">{v.stat}</div>
+              <div className="font-mono text-[13px] text-muted uppercase tracking-wide">{v.label}</div>
+            </div>
+          ))}
+        </div>
+        <div className="max-w-[680px]">
+          <p className="text-[17px] sm:text-xl leading-relaxed text-ink mb-5">
+            Operational Intelligence is <strong className="text-amber">$3,000 per month</strong>. The target return is <strong className="text-amber">10X — $30,000 to $90,000 in first-year value</strong> through recovered profit, reduced waste, new revenue, and owner time freed.
+          </p>
+          <p className="text-base leading-relaxed text-muted mb-8">
+            We don't take engagements where the math can't work. If your business doesn't have the scale or margin to support a 10X return, we'll tell you straight on the discovery call.
+          </p>
+          <a href="#contact" className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors">
+            Book a Discovery Call →
+          </a>
         </div>
       </section>
 
@@ -147,80 +149,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BUILT */}
-      <section id="built" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
-        <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">Proof of Work</div>
-        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[20ch] mb-12">BUILT, NOT THEORIZED.</h2>
-        <div className="flex flex-wrap gap-5">
-          {products.map((p) => (
-            <div key={p.name} className="flex-1 min-w-[300px] p-7 sm:p-9 bg-panel border border-ink/20 rounded-sm flex flex-col">
-              <h3 className="font-display font-normal text-[26px] mb-3">{p.name}</h3>
-              <p className="text-[15.5px] leading-relaxed text-muted mb-6 flex-1">{p.tagline}</p>
-              {p.href ? (
-                <a
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-[13px] text-amber hover:text-rustLight transition-colors inline-flex items-center gap-2"
-                >
-                  {p.href.replace(/^https?:\/\//, '')} →
-                </a>
-              ) : (
-                <span className="font-mono text-[13px] text-mutedDark">Internal product</span>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PRICING */}
-      <section id="pricing" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
-        <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">Pricing</div>
-        <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] max-w-[20ch] mb-12">
-          NO &quot;CONTACT US FOR PRICING.&quot;
-        </h2>
-        <div className="flex flex-wrap gap-5">
-          {tiers.map((t) => (
-            <div
-              key={t.name}
-              className={`flex-1 min-w-[300px] flex flex-col p-7 sm:p-9 border rounded-sm ${
-                t.featured ? 'bg-panelAlt border-rust' : 'bg-panel border-ink/20'
-              }`}
-            >
-              {t.featured && (
-                <div className="font-mono text-[11px] tracking-wider text-bg bg-amber inline-block px-2.5 py-1 rounded-sm mb-4 w-fit">
-                  MOST COMMON FIT
-                </div>
-              )}
-              <h3 className="font-display font-normal text-[26px] mb-2">{t.name}</h3>
-              <div className="font-mono text-xl text-ink mb-6">{t.price}</div>
-              <div className="flex flex-col gap-3 mb-7 flex-1">
-                {t.features.map((f) => (
-                  <div key={f} className="flex gap-2.5 text-[14.5px] text-muted leading-relaxed">
-                    <span className="text-rust shrink-0">—</span>
-                    <span>{f}</span>
-                  </div>
-                ))}
-              </div>
-              <a
-                href="#contact"
-                className={`block text-center font-semibold text-[15px] px-5 py-3.5 rounded-sm border transition-opacity hover:opacity-85 ${
-                  t.featured ? 'bg-rust border-rust text-[#fbf6ef]' : 'bg-transparent border-ink/20 text-ink'
-                }`}
-              >
-                Book a Discovery Call
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* CONTACT */}
       <section id="contact" className="max-w-[760px] mx-auto px-5 sm:px-8 py-16 sm:py-24">
         <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">Contact</div>
         <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] mb-4">LET&apos;S LOOK AT YOUR NUMBERS.</h2>
         <p className="text-base text-muted leading-relaxed max-w-[52ch] mb-10">
-          30 minutes, no pitch deck. Tell us what&apos;s going on and we&apos;ll tell you straight whether we can help.
+          30 minutes, no pitch deck. Tell us what&apos;s going on and we&apos;ll tell you straight whether Operational Intelligence is the right fit.
         </p>
         <ContactForm />
       </section>

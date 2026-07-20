@@ -22,9 +22,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 const siteUrl = 'https://oakbridgelabs.com';
-const title = 'Oakbridge Labs — Operations Consulting for Owner-Led Trades Businesses';
+const title = 'Oakbridge Labs — Operational Intelligence for Owner-Led Trades';
 const description =
-  "We audit your operations, find where time and margin are bleeding out, and systematically remove the friction through automation and process redesign.";
+  "A 4-part diagnostic that finds where your business leaks time and money — then builds the concrete path to the company you actually want. $3k/month. 10X value target.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -59,8 +59,8 @@ const jsonLd = {
     name: 'Craig Nowotny'
   },
   areaServed: 'US',
-  serviceType: 'Operations consulting for construction and trades businesses',
-  priceRange: '$2,000–$10,000+/mo'
+  serviceType: 'Operational Intelligence for owner-led trades and construction businesses',
+  priceRange: '$3,000/mo'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
