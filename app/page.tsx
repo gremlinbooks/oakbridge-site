@@ -28,7 +28,7 @@ const valueProofs = [
   { stat: '$30–90k', label: 'Annual value target per client' },
   { stat: '10X', label: 'Minimum return on engagement cost' },
   { stat: '4', label: 'Artifacts that form one complete picture' },
-  { stat: '$3k', label: 'Monthly retainer, paid upfront' }
+  { stat: '$3k+', label: 'Starting monthly retainer — scales with engagement size' }
 ];
 
 export default function Home() {
@@ -38,9 +38,6 @@ export default function Home() {
 
       {/* HERO */}
       <section id="top" className="max-w-[1180px] mx-auto px-5 sm:px-8 pt-[120px] sm:pt-[180px] pb-16 sm:pb-24 border-b border-line">
-        <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-5">
-          Operational Intelligence — Contractors & Owner-Led Trades
-        </div>
         <h1 className="font-display font-normal text-[40px] sm:text-[64px] lg:text-[88px] leading-[0.98] max-w-[16ch] mb-7">
           MAXIMIZING OPERATIONAL INTELLIGENCE.
         </h1>
@@ -121,7 +118,7 @@ export default function Home() {
         </div>
         <div className="max-w-[680px]">
           <p className="text-[17px] sm:text-xl leading-relaxed text-ink mb-5">
-            Operational Intelligence is <strong className="text-amber">$3,000 per month</strong>. The target return is <strong className="text-amber">10X — $30,000 to $90,000 in first-year value</strong> through recovered profit, reduced waste, new revenue, and owner time freed.
+            Operational Intelligence starts at <strong className="text-amber">$3,000 per month</strong>. Larger engagements — more locations, more revenue, more moving parts — price higher; the math is built around your scale. The target return is <strong className="text-amber">10X — $30,000 to $90,000 in first-year value</strong> through recovered profit, reduced waste, new revenue, and owner time freed.
           </p>
           <p className="text-base leading-relaxed text-muted mb-8">
             We don't take engagements where the math can't work. If your business doesn't have the scale or margin to support a 10X return, we'll tell you straight on the discovery call.
