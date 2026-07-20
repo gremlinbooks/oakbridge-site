@@ -17,7 +17,7 @@ const artifactSteps = [
 ];
 
 const processSteps = [
-  { num: '01', title: 'Discovery Call', timing: '30 min · Free', body: 'A straight conversation about where it hurts. We confirm there is enough scale and margin for OI to return 10X.' },
+  { num: '01', title: 'Discovery Call', timing: '20 min · Free', body: 'A straight conversation about where it hurts. We confirm there is enough scale and margin for OI to return 10X.' },
   { num: '02', title: 'Data + Vision Collection', timing: 'Week 1', body: 'We gather financials, sales records, operational workflow, and conduct the founder vision interview.' },
   { num: '03', title: 'Live Walkthrough', timing: 'Week 2', body: 'We present the 4-artifact diagnostic live on a call — the operational, financial, sales, and delta findings.' },
   { num: '04', title: 'Engagement + PDF Delivery', timing: 'Upon first payment', body: 'Once you sign and pay the first month, the full PDF package and weekly sprint schedule are delivered.' },
@@ -42,10 +42,10 @@ export default function Home() {
           Operational Intelligence — Contractors & Owner-Led Trades
         </div>
         <h1 className="font-display font-normal text-[40px] sm:text-[64px] lg:text-[88px] leading-[0.98] max-w-[16ch] mb-7">
-          SEE YOUR BUSINESS. THEN FIX IT.
+          MAXIMIZING OPERATIONAL INTELLIGENCE.
         </h1>
         <p className="text-[17px] sm:text-xl leading-relaxed text-muted max-w-[52ch] mb-10">
-          A 4-part diagnostic that exposes where your operation is leaking time and money — and builds the concrete path to the business you actually want.
+          Your data tells a story. Let&apos;s make sure it&apos;s the right one.
         </p>
         <a href="#contact" className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors">
           Book a Discovery Call →
@@ -140,12 +140,26 @@ export default function Home() {
         </h2>
         <div className="max-w-[680px]">
           <blockquote className="border-l-[3px] border-rust pl-5 sm:pl-6 text-lg sm:text-xl leading-relaxed text-ink mb-5 not-italic">
-            &quot;I&apos;ve spent 20+ years building and operating businesses in construction and operations. I started in
-            data analytics, transitioned into corporate leadership during the 2008 recession, and then returned to help scale
-            and eventually exit a family construction business in 2021. What came out of that is clarity — I&apos;m at my
-            best when I&apos;m building systems, improving operations, and helping businesses scale efficiently.&quot;
+            &quot;I&apos;ve spent 20+ years building and operating businesses in construction and operations. I started on
+            the tools in demolition, moved into corporate operations during the recession, then came back to help scale
+            and eventually exit a family construction business. Operational Intelligence is what I built for owners who
+            are done running hard and want to start moving.&quot;
           </blockquote>
           <div className="font-mono text-sm text-muted">— Craig Nowotny, Founder</div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8 text-sm">
+            <div>
+              <div className="font-mono text-amber tracking-[0.16em] uppercase text-xs mb-1">Field</div>
+              <div className="text-ink">Started in demolition, spent 20+ years on job sites and in the office.</div>
+            </div>
+            <div>
+              <div className="font-mono text-amber tracking-[0.16em] uppercase text-xs mb-1">Exit</div>
+              <div className="text-ink">Helped scale and exit a family construction business in 2021.</div>
+            </div>
+            <div>
+              <div className="font-mono text-amber tracking-[0.16em] uppercase text-xs mb-1">Now</div>
+              <div className="text-ink">Runs Operational Intelligence for owner-led trades across the Southeast.</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -154,7 +168,7 @@ export default function Home() {
         <div className="font-mono text-[13px] tracking-[0.16em] text-amber uppercase mb-4">Contact</div>
         <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] mb-4">LET&apos;S LOOK AT YOUR NUMBERS.</h2>
         <p className="text-base text-muted leading-relaxed max-w-[52ch] mb-10">
-          30 minutes, no pitch deck. Tell us what&apos;s going on and we&apos;ll tell you straight whether Operational Intelligence is the right fit.
+          20 minutes, no pitch deck. Tell us what&apos;s going on and we&apos;ll tell you straight whether Operational Intelligence is the right fit.
         </p>
         <ContactForm />
       </section>
