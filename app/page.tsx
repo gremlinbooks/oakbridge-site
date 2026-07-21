@@ -44,7 +44,12 @@ export default function Home() {
         <p className="text-[17px] sm:text-xl leading-relaxed text-muted max-w-[52ch] mb-10">
           Your data tells a story. Let&apos;s make sure it&apos;s the right one.
         </p>
-        <a href="#contact" className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors">
+        <a
+          href="https://cal.com/oakbridgelabs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors"
+        >
           Book a Discovery Call →
         </a>
       </section>
@@ -123,7 +128,12 @@ export default function Home() {
           <p className="text-base leading-relaxed text-muted mb-8">
             We don't take engagements where the math can't work. If your business doesn't have the scale or margin to support a 10X return, we'll tell you straight on the discovery call.
           </p>
-          <a href="#contact" className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors">
+          <a
+            href="https://cal.com/oakbridgelabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[17px] px-8 py-4 rounded-sm transition-colors"
+          >
             Book a Discovery Call →
           </a>
         </div>
@@ -166,6 +176,17 @@ export default function Home() {
         <h2 className="font-display font-normal text-[30px] sm:text-5xl leading-[1.05] mb-4">LET&apos;S LOOK AT YOUR NUMBERS.</h2>
         <p className="text-base text-muted leading-relaxed max-w-[52ch] mb-10">
           20 minutes, no pitch deck. Tell us what&apos;s going on and we&apos;ll tell you straight whether Operational Intelligence is the right fit.
+        </p>
+        <p className="text-base text-muted leading-relaxed max-w-[52ch] mb-8">
+          <a
+            href="https://cal.com/oakbridgelabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-amber underline underline-offset-4 hover:text-rust"
+          >
+            Book a 20-min Discovery Call directly →
+          </a>
+          <span className="text-mutedDark"> &nbsp;or send a message below.</span>
         </p>
         <ContactForm />
       </section>
