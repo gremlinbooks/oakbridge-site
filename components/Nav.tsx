@@ -4,9 +4,9 @@ import { useState } from 'react';
 
 const links = [
   { href: '#problem', label: 'Problem' },
-  { href: '#method', label: 'Method' },
+  { href: '#ai', label: 'AI' },
+  { href: '#offer', label: 'Offer' },
   { href: '#process', label: 'Process' },
-  { href: '#value', label: 'Value' },
   { href: '#about', label: 'About' }
 ];
 

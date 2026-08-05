@@ -22,9 +22,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 const siteUrl = 'https://oakbridgelabs.com';
-const title = 'Oakbridge Labs — Operational Intelligence for Owner-Led Trades';
+const title = 'Oakbridge Labs — AI + Operations for Owner-Led Trades';
 const description =
-  "A 4-part diagnostic that finds where your business leaks time and money — then builds the concrete path to the company you actually want. $3k/month. 10X value target.";
+  'We plug AI into your operations so quoting, scheduling, follow-up, and job costing stop bleeding your time and margin. $500 QuickOps Audit. 20+ years in the field.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -59,8 +59,8 @@ const jsonLd = {
     name: 'Craig Nowotny'
   },
   areaServed: 'US',
-  serviceType: 'Operational Intelligence for owner-led trades and construction businesses',
-  priceRange: '$3,000/mo'
+  serviceType: 'AI integration and operations automation for owner-led trades and construction businesses',
+  priceRange: '$500+'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
