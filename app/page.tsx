@@ -18,55 +18,22 @@ const aiExamples = [
   { title: 'Lead intake & routing', body: 'AI captures inquiry details from form, email, or text and routes them to the right person automatically.' }
 ];
 
-const offerTiers = [
-  {
-    num: '01',
-    name: 'QuickOps Audit',
-    tag: 'Find the leak',
-    price: '$500',
-    timing: '1 week',
-    best: 'Owners who know something is wrong but can\'t pinpoint where the margin is going.',
-    deliverables: [
-      '45-minute audit call with the owner',
-      'One-page diagnostic identifying the 2 biggest operational/AI opportunities',
-      'Dollarized estimate of what\'s leaking — time, money, or both',
-      'Recommended fix path: self-serve, build with us, or pass',
-      'No ongoing commitment'
-    ]
-  },
-  {
-    num: '02',
-    name: 'AI + Ops Build',
-    tag: 'Fix the leak',
-    price: '$2,500–$5,000',
-    timing: '2–4 weeks',
-    best: 'Owners ready to automate a specific pain point and see it work.',
-    deliverables: [
-      'Build 1–2 working automations or AI-assisted workflows',
-      'Integration with existing tools (QuickBooks, CRM, calendar, email)',
-      '30-day handoff support',
-      'A system that actually runs — not a report that sits in a drawer'
-    ]
-  },
-  {
-    num: '03',
-    name: 'Ongoing Ops Partner',
-    tag: 'Keep it running',
-    price: '$3,000–$5,000/mo',
-    timing: 'Monthly',
-    best: 'Firms with recurring operational pain and budget for continuous improvement.',
-    deliverables: [
-      'Monthly ops review + priority automation pipeline',
-      '1–2 new automations or improvements per quarter',
-      'Fractional operations support',
-      'Slack/email access for issues and decisions'
-    ]
-  }
+const auditIncludes = [
+  '45-minute audit call with the owner',
+  'One-page diagnostic identifying the 2 biggest operational/AI opportunities, dollarized',
+  'Google Business Profile buildout or optimization — claimed, verified, photos, services, hours, Q&A, posts. The whole thing, done properly.',
+  'Recommended fix path: self-serve, build with us, or pass',
+  'No ongoing commitment'
+];
+
+const whatsNext = [
+  { title: 'AI + Ops Build', detail: 'We build 1–2 working automations — quoting, scheduling, invoicing, job costing, lead intake. Integrated with your tools. $2,500–$5,000, 2–4 weeks.' },
+  { title: 'Ongoing Ops Partner', detail: 'Monthly ops review, new automations each quarter, fractional support. $3,000–$5,000/mo. Stay if it pays, leave if it doesn\'t.' }
 ];
 
 const processSteps = [
   { num: '01', title: 'Book the audit', timing: '20 min · Free', body: 'A straight conversation about where it hurts. If your business doesn\'t have the scale to benefit, we\'ll tell you.' },
-  { num: '02', title: 'Audit call + diagnostic', timing: '45 min · $500', body: 'We map the 3 biggest friction points and dollarize what they\'re costing you. You get a one-page report within 48 hours.' },
+  { num: '02', title: 'Audit call + diagnostic', timing: '45 min · $500', body: 'We map the 3 biggest friction points and dollarize what they\'re costing you. You get a one-page report within 48 hours, plus a fully built-out Google Business Profile.' },
   { num: '03', title: 'Build the fix', timing: '2–4 weeks', body: 'If you want us to build it, we quote the work. 1–2 working automations, integrated with your tools, 30-day handoff support.' },
   { num: '04', title: 'Keep it running', timing: 'Optional · Monthly', body: 'Monthly ops review, new automations each quarter, fractional support. Stay if it pays. Leave if it doesn\'t.' }
 ];
@@ -136,35 +103,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFFER STACK */}
+      {/* OFFER */}
       <section id="offer" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
-        <div className="font-mono text-[12px] tracking-[0.14em] text-amber mb-4">The offer</div>
-        <h2 className="font-display font-normal text-[28px] sm:text-[42px] leading-[1.08] max-w-[24ch] mb-12">Find the leak. Fix the leak. Keep it running.</h2>
-        <div className="flex flex-col gap-6">
-          {offerTiers.map((t) => (
-            <div key={t.num} className="border border-ink/15 rounded-sm p-6 sm:p-8 bg-panel">
-              <div className="flex flex-wrap items-baseline gap-4 mb-4">
-                <span className="font-mono text-[12px] text-amber">{t.num}</span>
-                <h3 className="font-display font-normal text-xl sm:text-2xl text-ink">{t.name}</h3>
-                <span className="font-mono text-[12px] text-mutedDark tracking-wide">{t.tag}</span>
-                <div className="ml-auto flex flex-wrap gap-4 items-baseline">
-                  <span className="font-display text-xl sm:text-2xl text-rust">{t.price}</span>
-                  <span className="font-mono text-[12px] text-mutedDark">{t.timing}</span>
-                </div>
-              </div>
-              <p className="text-[15px] leading-relaxed text-muted max-w-[56ch] mb-4">{t.best}</p>
-              <ul className="flex flex-col gap-2 max-w-[56ch]">
-                {t.deliverables.map((d, i) => (
-                  <li key={i} className="flex gap-3 text-[14.5px] leading-relaxed text-ink/90">
-                    <span className="text-rust font-mono shrink-0">→</span>
-                    <span>{d}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="font-mono text-[12px] tracking-[0.14em] text-amber mb-4">The audit</div>
+        <h2 className="font-display font-normal text-[28px] sm:text-[42px] leading-[1.08] max-w-[22ch] mb-5">
+          Five hundred dollars. One week. You&apos;ll know exactly where the leak is.
+        </h2>
+        <p className="text-[16px] sm:text-lg leading-relaxed text-muted max-w-[56ch] mb-10">
+          The QuickOps Audit is the front door. You get a 45-minute call, a one-page diagnostic with the two biggest opportunities dollarized, and we build out or fix your Google Business Profile so it actually shows up in the map pack and converts. That alone is worth the $500.
+        </p>
+
+        <div className="border border-ink/15 rounded-sm p-6 sm:p-8 bg-panel mb-10">
+          <div className="flex flex-wrap items-baseline gap-4 mb-5">
+            <h3 className="font-display font-normal text-xl sm:text-2xl text-ink">QuickOps Audit</h3>
+            <span className="font-mono text-[12px] text-mutedDark tracking-wide">1 week</span>
+            <span className="font-display text-2xl sm:text-3xl text-rust ml-auto">$500</span>
+          </div>
+          <p className="text-[15px] leading-relaxed text-muted max-w-[56ch] mb-5">
+            Best for owners who know something is wrong but can&apos;t pinpoint where the margin is going. No ongoing commitment — if there&apos;s nothing worth fixing, we&apos;ll tell you straight.
+          </p>
+          <ul className="flex flex-col gap-2.5 max-w-[56ch]">
+            {auditIncludes.map((d, i) => (
+              <li key={i} className="flex gap-3 text-[14.5px] leading-relaxed text-ink/90">
+                <span className="text-rust font-mono shrink-0">→</span>
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="mt-10">
+
+        <div className="mb-10">
           <a
             href="https://cal.com/oakbridgelabs"
             target="_blank"
@@ -173,6 +141,24 @@ export default function Home() {
           >
             Book the $500 audit →
           </a>
+        </div>
+
+        <div className="border-t border-line pt-10">
+          <div className="font-mono text-[12px] tracking-[0.14em] text-amber mb-3">After the audit, if it makes sense</div>
+          <h3 className="font-display font-normal text-[22px] sm:text-[28px] leading-[1.1] mb-6 max-w-[24ch]">
+            What comes next.
+          </h3>
+          <div className="flex flex-col gap-5 max-w-[56ch]">
+            {whatsNext.map((n, i) => (
+              <div key={i} className="flex gap-4 items-baseline">
+                <span className="font-mono text-[13px] text-mutedDark shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <div className="font-display text-lg text-ink mb-1">{n.title}</div>
+                  <div className="text-[14.5px] leading-relaxed text-muted">{n.detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
