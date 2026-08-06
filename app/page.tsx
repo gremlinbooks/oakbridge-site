@@ -33,7 +33,7 @@ const whatsNext = [
 
 const processSteps = [
   { num: '01', title: 'Book the audit', timing: '20 min · Free', body: 'A straight conversation about where it hurts. If your business doesn\'t have the scale to benefit, we\'ll tell you.' },
-  { num: '02', title: 'Audit call + diagnostic', timing: '45 min · $500', body: 'We map the 3 biggest friction points and dollarize what they\'re costing you. You get a one-page report within 48 hours, plus a fully built-out Google Business Profile.' },
+  { num: '02', title: 'Audit call + diagnostic', timing: '45 min · $250', body: 'We map the 3 biggest friction points and dollarize what they\'re costing you. You get a one-page report within 48 hours, plus a fully built-out Google Business Profile.' },
   { num: '03', title: 'Build the fix', timing: '2–4 weeks', body: 'If you want us to build it, we quote the work. 1–2 working automations, integrated with your tools, 30-day handoff support.' },
   { num: '04', title: 'Keep it running', timing: 'Optional · Monthly', body: 'Monthly ops review, new automations each quarter, fractional support. Stay if it pays. Leave if it doesn\'t.' }
 ];
@@ -58,7 +58,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[16px] px-7 py-3.5 rounded-sm transition-colors"
           >
-            Book the $500 audit →
+            Book the $250 audit →
           </a>
           <a
             href="#offer"
@@ -107,17 +107,17 @@ export default function Home() {
       <section id="offer" className="max-w-[1180px] mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-line">
         <div className="font-mono text-[12px] tracking-[0.14em] text-amber mb-4">The audit</div>
         <h2 className="font-display font-normal text-[28px] sm:text-[42px] leading-[1.08] max-w-[22ch] mb-5">
-          Five hundred dollars. One week. You&apos;ll know exactly where the leak is.
+          Two hundred fifty dollars. One week. You&apos;ll know exactly where the leak is.
         </h2>
         <p className="text-[16px] sm:text-lg leading-relaxed text-muted max-w-[56ch] mb-10">
-          The QuickOps Audit is the front door. You get a 45-minute call, a one-page diagnostic with the two biggest opportunities dollarized, and we build out or fix your Google Business Profile so it actually shows up in the map pack and converts. That alone is worth the $500.
+          The QuickOps Audit is the front door. You get a 45-minute call, a one-page diagnostic with the two biggest opportunities dollarized, and we build out or fix your Google Business Profile so it actually shows up in the map pack and converts. That alone is worth the $250.
         </p>
 
         <div className="border border-ink/15 rounded-sm p-6 sm:p-8 bg-panel mb-10">
           <div className="flex flex-wrap items-baseline gap-4 mb-5">
             <h3 className="font-display font-normal text-xl sm:text-2xl text-ink">QuickOps Audit</h3>
             <span className="font-mono text-[12px] text-mutedDark tracking-wide">1 week</span>
-            <span className="font-display text-2xl sm:text-3xl text-rust ml-auto">$500</span>
+            <span className="font-display text-2xl sm:text-3xl text-rust ml-auto">$250</span>
           </div>
           <p className="text-[15px] leading-relaxed text-muted max-w-[56ch] mb-5">
             Best for owners who know something is wrong but can&apos;t pinpoint where the margin is going. No ongoing commitment — if there&apos;s nothing worth fixing, we&apos;ll tell you straight.
@@ -139,7 +139,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block bg-rust hover:bg-rustLight text-[#fbf6ef] font-semibold text-[16px] px-7 py-3.5 rounded-sm transition-colors"
           >
-            Book the $500 audit →
+            Book the $250 audit →
           </a>
         </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
         <div className="font-mono text-[12px] tracking-[0.14em] text-amber mb-4">Contact</div>
         <h2 className="font-display font-normal text-[28px] sm:text-[42px] leading-[1.08] mb-4">Find your leak.</h2>
         <p className="text-[15.5px] text-muted leading-relaxed max-w-[52ch] mb-10">
-          Twenty minutes, no pitch deck. Tell us what&apos;s eating your week and we&apos;ll tell you straight whether the $500 audit is worth it for you.
+          Twenty minutes, no pitch deck. Tell us what&apos;s eating your week and we&apos;ll tell you straight whether the $250 audit is worth it for you.
         </p>
         <p className="text-[15.5px] text-muted leading-relaxed max-w-[52ch] mb-8">
           <a
